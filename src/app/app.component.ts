@@ -6,5 +6,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'potd';
+
+  date: string = "";
+
+  newDateSearch($event: string) {
+    this.date = $event;
+    console.log(this.date)
+  }
+
 }

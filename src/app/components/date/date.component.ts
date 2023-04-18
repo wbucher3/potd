@@ -1,4 +1,5 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { PhotoService } from 'src/app/photo.service';
 
 @Component({
   selector: 'app-date',
@@ -35,9 +36,17 @@ export class DateComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    
 
   }
 
+  // tells the parent component that there has been a new date search
+  emitDate() {
+    this.date.emit(this.selectedYear + "-" + this.selectedMonth + "-" + this.selectedDay);
+  }
+
+
+  // date stuff
 
   isLeapYear() {
     return (
@@ -69,10 +78,6 @@ export class DateComponent implements OnInit {
     if (this.selectedDay > maxDay) {
       this.selectedDay = 1;
     }
-  }
-
-  emitDate() {
-    this.date.emit(this.selectedYear + "-" + this.selectedMonth + "-" + this.selectedDay);
   }
 
 }

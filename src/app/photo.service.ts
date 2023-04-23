@@ -16,7 +16,7 @@ export class PhotoService {
   }
 
   getPhotoInformation(key: string) {
-    console.log("Searching for: " + key)
+    // console.log("Searching for: " + key)
     return this.photoData[key];
   }
 

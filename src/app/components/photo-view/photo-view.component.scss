@@ -1,0 +1,14 @@
+.flex-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+img {
+    width: 100%;
+    min-height: 200px;
+    min-width: 300px;
+    max-width: 800px;
+    max-height: 1200px;
+}

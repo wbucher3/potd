@@ -9,12 +9,15 @@ import { PhotoService } from './photo.service';
 export class AppComponent {
 
   date: string = "";
+  currentPhoto: any;
+  currentDate: Date = new Date();
 
   constructor(private service: PhotoService) {}
 
   newDateSearch($event: string) {
     this.date = $event;
-    console.log(this.service.getPhotoInformation(this.date));
+    this.currentPhoto = this.service.getPhotoInformation(this.date);
+    // console.log(this.currentPhoto);
   }
 
 }

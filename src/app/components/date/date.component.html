@@ -1,4 +1,5 @@
-<div>
+<div class="flex-container">
+  <div class="box">
     <label>Year</label>
     <select [(ngModel)]="selectedYear" (ngModelChange)="monthOnChange()">
       <option *ngFor="let year of years" [value]="year">{{year}}</option>
@@ -6,7 +7,7 @@
   </div>
   
   
-  <div>
+  <div class="box">
     <label>Month</label>
     <select [(ngModel)]="selectedMonth" (ngModelChange)="monthOnChange()">
       <option *ngFor="let month of months" [value]="month">{{month}}</option>
@@ -14,18 +15,15 @@
   </div>
   
   
-  <div>
+  <div class="box">
     <label>Day</label>
     <select [(ngModel)]="selectedDay">
       <option *ngFor="let day of days" [value]="day">{{day}}</option>
     </select>
   </div>
-
-  <div>
-    <button (click)="emitDate()">Find Picture</button>
-  </div>
+</div>
 
 
-  <div>
-    <img src="https://lh3.googleusercontent.com/drive-viewer/AAOQEOSSUqMvEuzrUK4LseR2DDleRuK_Fj4tnPLu4dQr5VAzRQtp7oKCG59GBRkOpTYxMl4QGlgLxdwMYT3uChI2DftqZQAfNg=s1600">
-  </div>
+<div class="box">
+  <button (click)="emitDate()">Find Picture</button>
+</div>

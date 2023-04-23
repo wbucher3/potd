@@ -1,1 +1,4 @@
+<h1>Photo of the Day</h1>
 <app-date (date)="newDateSearch($event)"></app-date>
+<app-photo-view [photo]="currentPhoto"></app-photo-view>
+<footer>© Will Bucher {{currentDate | date: 'y' }}</footer>

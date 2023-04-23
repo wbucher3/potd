@@ -1,1 +1,9 @@
-<p>photo-view works!</p>
+<div class="flex-container" *ngIf="photo == undefined">
+    <p>Select a Date</p>
+</div>
+
+
+<div class="flex-container" *ngIf="photo != undefined">
+    <img [src]="photo.id">
+    <p>{{photo.description}}</p>
+</div>

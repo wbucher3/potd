@@ -26,11 +26,11 @@ export class DateComponent implements OnInit {
     }
     this.days = this.maxDays;
 
-    for (let i:number = 1; i <= 12; i++) {
+    for (let i:number = 2; i <= 4; i++) {
       this.months.push(i);
     }
 
-    for (let i:number = 1990; i <= 2100; i++) {
+    for (let i:number = 2023; i <= 2023; i++) {
       this.years.push(i);
     }
   }
